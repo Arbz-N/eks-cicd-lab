@@ -3,7 +3,7 @@ version: 0.2
 env:
   variables:
     AWS_DEFAULT_REGION: "us-east-1"
-    EKS_CLUSTER_NAME: "cicd-lab-cluster"
+    EKS_CLUSTER_NAME: "cicd-lab-cluster-1"
     ECR_REPO_NAME: "cicd-lab-app"
 
 phases:

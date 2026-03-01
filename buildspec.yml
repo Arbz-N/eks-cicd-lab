@@ -1,3 +1,4 @@
+cat > buildspec.yml << 'EOF'
 version: 0.2
 
 env:
@@ -8,8 +9,6 @@ env:
 
 phases:
   install:
-    runtime-versions:
-      docker: 20
     commands:
       - echo "Installing kubectl"
       - curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
@@ -45,3 +44,4 @@ phases:
       - kubectl apply -f k8s/service.yaml
       - kubectl rollout status deployment/cicd-app
       - echo "Done"
+EOF
